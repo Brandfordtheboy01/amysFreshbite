@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 140 20% 98%;
+    --foreground: 20 14% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14% 12%;
+    --primary: 132 70% 40%;
+    --primary-foreground: 140 20% 99%;
+    --secondary: 140 30% 95%;
+    --secondary-foreground: 20 14% 20%;
+    --muted: 140 20% 94%;
+    --muted-foreground: 20 10% 42%;
+    --accent: 18 85% 55%;
+    --accent-foreground: 20 14% 15%;
+    --destructive: 0 72% 48%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 140 15% 88%;
+    --input: 140 15% 88%;
+    --ring: 132 70% 40%;
+    --success: 132 70% 40%;
+    --success-foreground: 0 0% 98%;
+    --warning: 18 85% 55%;
+    --warning-foreground: 20 14% 15%;
+    --chart-1: 132 70% 40%;
+    --chart-2: 142 60% 38%;
+    --chart-3: 18 85% 55%;
+    --chart-4: 200 60% 45%;
+    --chart-5: 280 50% 50%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 20 14% 8%;
+    --foreground: 30 20% 92%;
+    --card: 20 14% 11%;
+    --card-foreground: 30 20% 92%;
+    --popover: 20 14% 11%;
+    --popover-foreground: 30 20% 92%;
+    --primary: 132 70% 45%;
+    --primary-foreground: 140 20% 98%;
+    --secondary: 20 10% 18%;
+    --secondary-foreground: 30 20% 92%;
+    --muted: 20 10% 16%;
+    --muted-foreground: 30 10% 60%;
+    --accent: 18 85% 55%;
+    --accent-foreground: 20 14% 10%;
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 20 10% 20%;
+    --input: 20 10% 20%;
+    --ring: 132 70% 45%;
+    --success: 132 70% 40%;
+    --success-foreground: 0 0% 98%;
+    --warning: 18 85% 55%;
+    --warning-foreground: 20 14% 15%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fade-up 0.5s ease-out;
+  }
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
